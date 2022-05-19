@@ -1,0 +1,159 @@
+.about {
+  padding: 30px 0 200px;
+  background-color: $bg;
+
+  @include for-1200-px {
+    padding-bottom: 100px;
+  }
+
+  @include for-768-px {
+    padding-bottom: 50px;
+  }
+
+  @include for-515-px {
+    padding: 30px 0;
+  }
+
+  &__top {
+    margin-bottom: 120px;
+
+    @include for-900-px {
+      margin-bottom: 0;
+    }
+  }
+
+  &__box {
+    font-size: 32px;
+    @extend %DMSans-500;
+    margin-bottom: 30px;
+
+    @include for-900-px {
+      font-size: 28px;
+    }
+
+    @include for-515-px {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__number {
+    color: #8091A0;
+  }
+
+  &__title {
+    @extend %title;
+    display: inline;
+
+    @include for-900-px {
+      font-size: 32px;
+    }
+
+    @include for-515-px {
+      font-size: 24px;
+    }
+  }
+
+  &__subtitle {
+    @include for-515-px {
+      font-size: 24px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 65px 0;
+
+    @include for-900-px {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include for-515-px {
+      padding: 30px 0;
+    }
+  }
+
+  &__img {
+    background-image: url('../images/me.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    padding: 0 0 50% 0;
+
+    @include for-900-px {
+      width: 70%;
+      padding: 0 0 70% 0;
+      margin-bottom: 30px;
+    }
+
+    @include for-515-px {
+      width: 100%;
+      padding: 0 0 100% 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__info {
+    padding-left: 60px;
+    @extend %Rubik-400;
+
+    @include for-900-px {
+      padding-left: 0;
+      max-width: 100%;
+    }
+  }
+
+  &__name {
+    font-size: 32px;
+    color: #FF9D00;
+    margin-bottom: 50px;
+
+    @include for-900-px {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    max-width: 600px;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 90px;
+
+    @include for-1200-px {
+      margin-bottom: 40px;
+    }
+
+    @include for-900-px {
+      font-size: 18px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+
+  &__subtext {
+    margin-bottom: 30px;
+    display: block;
+
+    @include for-900-px {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__btn {
+    @extend %link;
+    display: block;
+
+    @include for-900-px {
+      font-size: 24px;
+    }
+
+    @include for-650-px {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,219 @@
+.to-do {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    @include for-420-px {
+      font-size: 20px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $accent;
+    border: none;
+    border-radius: 5px;
+    color: $title;
+    height: 38px;
+    max-width: 38px;
+    width: 100%;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+      background-color: #FF9D00;
+    }
+
+    .to-do__arrow {
+      transition: transform .3s ease;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__btn--none {
+    .to-do__arrow {
+      transform: rotate(0);
+    }
+  }
+
+  &__inner {
+    display: block;
+  }
+
+  &__inner--none {
+    display: none;
+  }
+
+  &__content {
+    padding: 15px;
+  }
+
+  &__form {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    padding: 15px;
+    z-index: 5;
+    background-color: #00162A;
+    box-shadow: 0 2px 4px rgb(44 62 80 / 15%);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-top: 10px;
+  }
+
+  &__input {
+    width: 100%;
+    height: 50px;
+    float: left;
+    color: $title;
+    font-size: 18px;
+    font-weight: 400;
+    text-indent: 18px;
+    padding: 0 60px 0 0;
+    background: $accent;
+    border-radius: 5px 25px 25px 5px;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+  }
+
+  &__button {
+    width: 50px;
+    height: 50px;
+    background-color: $default;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    border-radius: 25px;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+
+
+    span {
+      width: 40px;
+      height: 4px;
+      background-color: $title;
+      border-radius: 4px;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+      transition: all .3s ease;
+
+      &:last-child {
+        transform: translate(50%, -50%) rotate(90deg);
+      }
+    }
+
+    &:hover {
+      span {
+        background-color: $accent;
+      }
+    }
+  }
+
+  &__list {
+    margin: 0 0 50px 0;
+    position: relative;
+  }
+
+  &__completed {
+    position: relative;
+    margin: 0;
+
+    .to-do__complete {
+      background-color: $accent;
+      border-color: $accent;
+    }
+  }
+
+  &__item {
+    background-color: $default;
+    width: 100%;
+    min-height: 50px;
+    font-size: 16px;
+    line-height: 22px;
+    color: $title;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 14px 100px 14px 14px;
+
+    &:not(last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__buttons {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-right: 8px;
+    display: flex;
+  }
+
+  &__remove {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    background-image: url('../images/trash.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 8px;
+    transition: all .3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__complete {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    background-image: url('../images/icons/check.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid $title;
+    border-radius: 50%;
+    margin: 0;
+    transition: all .3s ease;
+
+    &:hover {
+      background-color: $accent;
+      border-color: $accent;
+    }
+  }
+
+  &__list:after,
+  &__completed:after {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+    position: absolute;
+  }
+
+  &__list:empty:after {
+    content: 'Нет задач';
+  }
+
+  &__completed:empty:after {
+    content: 'Нет выполненых задач';
+  }
+
+  &__complete--active {
+    background-color: $accent;
+    border-color: $accent;
+  }
+}

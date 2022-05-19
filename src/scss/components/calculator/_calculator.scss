@@ -1,0 +1,370 @@
+.work-js {
+  background-color: $bg;
+}
+
+.calculator {
+
+  padding-bottom: 30px;
+
+  .portfolio__number {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $accent;
+    border: none;
+    border-radius: 5px;
+    color: $title;
+    height: 38px;
+    max-width: 38px;
+    width: 100%;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+      background-color: #FF9D00;
+    }
+
+    .calculator__arrow {
+      transition: transform .3s ease;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__btn--none {
+    .calculator__arrow {
+      transform: rotate(0);
+    }
+  }
+
+  &__add-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $accent;
+    border: none;
+    border-radius: 5px;
+    color: $title;
+    height: 38px;
+    max-width: 38px;
+    width: 100%;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+      background-color: #FF9D00;
+    }
+  }
+
+  .main {
+    margin-top: 50px;
+    display: block;
+
+    &-box {
+      display: flex;
+      padding-bottom: 100px;
+    }
+
+    &-controls {
+      width: 60%;
+      padding-left: 10px;
+      padding-right: 10px;
+      display: flex;
+      flex-direction: column;
+
+      &__views {
+        margin-bottom: 20px;
+      }
+
+      &__item {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0;
+      }
+
+      &__input {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        background-color: $accent;
+        border-radius: 5px;
+      }
+
+      &__select {
+        width: 50%;
+        display: flex;
+        padding-right: 10px;
+        flex-direction: column;
+      }
+
+      &__checkbox {
+        width: 50%;
+        display: flex;
+        align-items: center;
+
+        input {
+          margin-right: 10px;
+        }
+      }
+
+      &__range {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        .range-value {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    &-total {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-left: 2px solid $default;
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        label {
+          margin-bottom: 10px;
+        }
+      }
+
+      &__buttons {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  .main--none {
+    display: none;
+  }
+
+  @media (max-width: 900px) {
+    .main {
+      &-box {
+        flex-direction: column;
+      }
+
+      &-controls {
+        width: 100%;
+
+        &__views {
+          margin-bottom: 30px;
+        }
+
+        &__item {
+          margin-bottom: 15px;
+        }
+
+        &__checkbox {
+          margin-bottom: 15px;
+        }
+      }
+
+      &-total {
+        width: 100%;
+        border: none;
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    .main {
+      &-controls {
+        &__views {
+          .screen-btn {
+            button {
+              width: 100%;
+            }
+          }
+        }
+
+        &__item {
+          flex-direction: column;
+          margin-bottom: 30px;
+        }
+
+        &__select {
+          width: 100%;
+          margin-bottom: 10px;
+          padding-right: 0;
+        }
+
+        &__checkbox {
+          width: 100%;
+        }
+
+        &__input {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+
+    .calculator__title {
+      font-size: 20px;
+    }
+  }
+
+  input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: $default;
+    height: 8px;
+    border-radius: 5px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+
+  input[type=range]:focus {
+    outline: none;
+  }
+
+  input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    // border: 1px solid #000000;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: $accent;
+    cursor: pointer;
+    margin-top: 0px;
+    /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    /* Add cool effects to your sliders! */
+  }
+
+  /* All the same stuff for Firefox */
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid $accent;
+    height: 36px;
+    width: 16px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+  }
+
+  /* All the same stuff for IE */
+  input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid $accent;
+    height: 36px;
+    width: 16px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+  }
+
+  .custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  .custom-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+
+  .custom-checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid $default;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+
+  .custom-checkbox:checked+label::before {
+    border-color: $accent;
+    background-color: $bg;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+  }
+
+  label,
+  select,
+  input {
+    cursor: pointer;
+  }
+
+  select,
+  input {
+    border: 2px solid $default;
+    border-radius: 5px;
+    height: 36px;
+    padding: 5px;
+    background-color: $accent;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .handler__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $accent;
+    border: none;
+    border-radius: 5px;
+    color: $title;
+    height: 38px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+      background-color: #FF9D00;
+    }
+  }
+}

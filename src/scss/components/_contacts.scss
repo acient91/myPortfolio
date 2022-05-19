@@ -1,0 +1,145 @@
+.contacts {
+  padding: 70px 0 20px;
+  background-color: #00162A;
+
+  @include for-768-px {
+    padding: 70px 0;
+  }
+
+  @include for-420-px {
+    padding: 50px 0;
+  }
+
+  &__top {
+    margin-bottom: 150px;
+
+    @include for-768-px {
+      margin-bottom: 70px;
+    }
+  }
+
+  &__box {
+    font-size: 32px;
+    @extend %DMSans-500;
+    margin-bottom: 30px;
+
+    @include for-515-px {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__numbers {
+    color: #8091A0;
+  }
+
+  &__title {
+    @extend %title;
+    display: inline;
+
+    @include for-900-px {
+      font-size: 32px;
+    }
+
+    @include for-515-px {
+      font-size: 24px;
+    }
+  }
+
+  &__subtitle {
+    @include for-515-px {
+      font-size: 24px;
+    }
+  }
+
+  &__biografy {
+    margin-bottom: 100px;
+
+    @include for-420-px {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__item {
+    font-size: 20px;
+    margin-bottom: 30px;
+    @extend %GothamPro-200;
+
+    @include for-420-px {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__num {
+    color: #8091A0;
+  }
+
+  &__surname {
+    color: $accent;
+  }
+
+  &__number {
+    color: #FF9D00;
+  }
+
+  &__links {
+    color: #70E4AC;
+    transition: all .3s ease-in-out;
+  }
+
+  &__link {
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      color: $accent;
+
+      .contacts__links {
+        color: #FF9D00;
+      }
+    }
+  }
+
+  &__contact {
+    margin-bottom: 100px;
+
+    @include for-420-px {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__socials {
+    color: #70E4AC;
+    transition: color .3s ease-in-out;
+
+    &:hover {
+      color: #FF9D00;
+    }
+  }
+}
+
+.footer {
+  background-color: #00162A;
+
+  &__inner {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    color: #8091A0;
+
+    @include for-515-px {
+      flex-wrap: wrap;
+    }
+
+    @include for-420-px {
+      font-size: 14px;
+    }
+  }
+
+  &__author {
+    margin-right: 50px;
+
+  }
+}

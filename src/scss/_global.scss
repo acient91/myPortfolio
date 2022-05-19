@@ -1,0 +1,42 @@
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.25;
+  @extend %PlayfairDisplay-400;
+  color: $text;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1370px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-food {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+img {
+  object-fit: contain;
+}
+
+button {
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: transparent;
+}

@@ -1,0 +1,286 @@
+.portfolio {
+  padding: 70px 0 200px;
+  background-color: $bg;
+
+  @include for-768-px {
+    padding: 70px 0;
+  }
+
+  &__top {
+    margin-bottom: 90px;
+
+    @include for-1200-px {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__box {
+    font-size: 32px;
+    @extend %DMSans-500;
+    margin-bottom: 30px;
+
+    @include for-515-px {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__number {
+    color: #8091A0;
+  }
+
+  &__title {
+    @extend %title;
+    display: inline;
+
+    @include for-900-px {
+      font-size: 32px;
+    }
+
+    @include for-515-px {
+      font-size: 24px;
+    }
+  }
+
+  &__subtitle {
+    @include for-900-px {
+      font-size: 28px;
+    }
+
+    @include for-515-px {
+      font-size: 24px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: $text;
+
+    @include for-768-px {
+      font-size: 18px;
+    }
+
+    @include for-515-px {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 20px;
+      justify-items: center;
+    }
+  }
+
+  &__items {
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include for-768-px {
+        margin-right: 18px;
+      }
+
+      @include for-515-px {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__btn {
+    color: $text;
+    transition: color .3s ease-in-out;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__inner {
+    margin-top: 100px;
+
+    @include for-1200-px {
+      margin-top: 50px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+
+      @include for-420-px {
+        margin-bottom: 40px;
+      }
+    }
+
+    &:nth-child(2n) {
+      .portfolio__content {
+        order: -1;
+        padding: 0 40px 0 0;
+
+        @include for-900-px {
+          order: 0;
+        }
+
+        @include for-515-px {
+          padding: 0;
+        }
+      }
+
+      .portfolio__img {
+
+        @include for-900-px {
+          margin: 0 auto 30px;
+        }
+      }
+    }
+
+    @include for-900-px {
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    @include for-650-px {}
+  }
+
+  &__img {
+    width: 50%;
+    position: relative;
+    padding: 0 0 30% 0;
+
+    @include for-900-px {
+      margin: 0 auto 30px;
+      width: 80%;
+      padding: 0 0 44% 0;
+    }
+
+    @include for-515-px {
+      margin: 0 auto 30px;
+      width: 100%;
+      padding: 0 0 60% 0;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__content {
+    max-width: 570px;
+    width: 100%;
+    padding-left: 40px;
+
+    @include for-768-px {
+      max-width: 326px;
+    }
+
+    @include for-900-px {
+      max-width: 100%;
+      padding-left: 0;
+    }
+  }
+
+  &__name {
+    font-size: 32px;
+    color: #70E4AC;
+    margin-bottom: 50px;
+    display: block;
+
+    @include for-1200-px {
+      margin-bottom: 25px;
+    }
+
+    @include for-900-px {
+      font-size: 24px;
+    }
+
+    @include for-768-px {
+      margin-bottom: 10px;
+    }
+
+    @include for-650-px {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    max-width: 570px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 1.2;
+
+    @include for-900-px {
+      font-size: 18px;
+    }
+
+    @include for-768-px {
+      margin-bottom: 10px;
+      line-height: 1.1;
+    }
+
+    @include for-650-px {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__technology {
+    font-size: 18px;
+    color: #8091A0;
+    display: flex;
+  }
+
+  &__techno {
+    display: block;
+    position: relative;
+
+    &:not(:last-child) {
+      padding-right: 20px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 18px;
+        background-color: #8091A0;
+        right: 9px;
+        top: 0;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    margin-top: 80px;
+    @extend %link;
+
+    @include for-1200-px {
+      margin-top: 40px;
+    }
+
+    @include for-900-px {
+      font-size: 24px;
+    }
+
+    @include for-768-px {
+      margin-top: 10px;
+    }
+
+    @include for-650-px {
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+
+  .mixitup-control-active {
+    color: $accent;
+    font-weight: 500;
+  }
+}

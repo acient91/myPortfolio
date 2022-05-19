@@ -1,0 +1,86 @@
+$text: #fff;
+$bg: #002240;
+$accent: #9EFFFF;
+$title: #190d08;
+$default: #70E4AC;
+
+
+%DMSans-500 {
+  font-family: 'DMSans', sans-serif;
+  font-weight: 500;
+}
+
+%DMSans-700 {
+  font-family: 'DMSans', sans-serif;
+  font-weight: 700;
+}
+
+%Rubik-500 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+}
+
+%Rubik-400 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+}
+
+%GothamPro-medium {
+  font-family: 'GothamPro-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%GothamPro-200 {
+  font-family: 'GothamPro', sans-serif;
+  font-weight: 200;
+}
+
+%Oranienbaum {
+  font-family: 'Oranienbaum-Regular',
+    sans-serif;
+  font-weight: 400;
+}
+
+%PlayfairDisplay-700 {
+  font-family: 'PlayfairDisplay-VariableFont_wght',
+    sans-serif;
+  font-weight: 700;
+}
+
+%PlayfairDisplay-400 {
+  font-family: 'PlayfairDisplay-VariableFont_regular',
+    sans-serif;
+  font-weight: 400;
+}
+
+%button {
+  padding: 20px 70px;
+  border: 1px solid $accent;
+  color: $text;
+  text-transform: uppercase;
+  font-size: 18px;
+  transition: background-color .3s ease-in-out;
+
+  &:hover {
+    background-color: $accent;
+  }
+}
+
+%link {
+  color: $accent;
+  @extend %DMSans-500;
+  font-size: 32px;
+  display: inline-block;
+  outline: transparent;
+  transition: color .3s ease-in-out;
+
+  &:hover {
+    color: #FF9D00;
+  }
+}
+
+%title {
+  color: #9EFFFF;
+  position: relative;
+  @extend %GothamPro-200;
+}
