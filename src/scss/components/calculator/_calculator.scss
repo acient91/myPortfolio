@@ -37,14 +37,20 @@
 
     .calculator__arrow {
       transition: transform .3s ease;
-      transform: rotate(180deg);
+      transform: rotate(0);
     }
   }
 
   &__btn--none {
     .calculator__arrow {
-      transform: rotate(0);
+      transform: rotate(180deg);
     }
+  }
+
+  &__info {
+    margin-top: 10px;
+    padding-left: 30px;
+    color: #FF9D00;
   }
 
   &__add-btn {
@@ -68,11 +74,15 @@
 
   .main {
     margin-top: 50px;
-    display: block;
 
     &-box {
       display: flex;
       padding-bottom: 100px;
+      transition: all .3s ease;
+    }
+
+    &-box--none {
+      display: none;
     }
 
     &-controls {
@@ -157,7 +167,7 @@
   }
 
   .main--none {
-    display: none;
+    height: 0;
   }
 
   @media (max-width: 900px) {

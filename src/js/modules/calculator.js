@@ -1,7 +1,7 @@
 'use strict'
 const calculator = () => {
   const calculatorBtn = document.querySelector('.calculator__btn');
-  const calculatorBox = document.getElementById('main');
+  const calculatorBox = document.querySelector('.main-box');
   const buttonPlus = document.querySelector('.calculator__add-btn');
   const otherItemsPercent = document.querySelectorAll('.other-items.percent');
   const otherItemsNumber = document.querySelectorAll('.other-items.number');
@@ -24,7 +24,7 @@ const calculator = () => {
 
   calculatorBtn.addEventListener('click', () => {
     calculatorBtn.classList.toggle('calculator__btn--none')
-    calculatorBox.classList.toggle('main--none')
+    calculatorBox.classList.toggle('main-box--none')
   });
 
   const appData = {

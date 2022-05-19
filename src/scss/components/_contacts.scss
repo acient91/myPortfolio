@@ -63,6 +63,7 @@
   &__item {
     font-size: 20px;
     margin-bottom: 30px;
+    display: flex;
     @extend %GothamPro-200;
 
     @include for-420-px {
@@ -73,6 +74,7 @@
 
   &__num {
     color: #8091A0;
+    margin-right: 6px;
   }
 
   &__surname {
@@ -109,12 +111,29 @@
   }
 
   &__socials {
+    display: flex;
+    align-items: center;
     color: #70E4AC;
+    position: relative;
     transition: color .3s ease-in-out;
 
     &:hover {
       color: #FF9D00;
+
+      .contacts__socials-img {
+        right: -50px;
+        opacity: 1;
+      }
     }
+  }
+
+  &__socials-img {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    opacity: 0;
+    transition: all .3s ease;
   }
 }
 

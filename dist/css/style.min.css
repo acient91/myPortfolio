@@ -1469,6 +1469,7 @@ button {
 .contacts__item {
   font-size: 20px;
   margin-bottom: 30px;
+  display: flex;
 }
 @media (max-width: 420px) {
   .contacts__item {
@@ -1478,6 +1479,7 @@ button {
 }
 .contacts__num {
   color: #8091A0;
+  margin-right: 6px;
 }
 .contacts__surname {
   color: #9EFFFF;
@@ -1507,11 +1509,26 @@ button {
   }
 }
 .contacts__socials {
+  display: flex;
+  align-items: center;
   color: #70E4AC;
+  position: relative;
   transition: color 0.3s ease-in-out;
 }
 .contacts__socials:hover {
   color: #FF9D00;
+}
+.contacts__socials:hover .contacts__socials-img {
+  right: -50px;
+  opacity: 1;
+}
+.contacts__socials-img {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
 .footer {
@@ -1576,10 +1593,15 @@ button {
 }
 .calculator__btn .calculator__arrow {
   transition: transform 0.3s ease;
-  transform: rotate(180deg);
+  transform: rotate(0);
 }
 .calculator__btn--none .calculator__arrow {
-  transform: rotate(0);
+  transform: rotate(180deg);
+}
+.calculator__info {
+  margin-top: 10px;
+  padding-left: 30px;
+  color: #FF9D00;
 }
 .calculator__add-btn {
   display: flex;
@@ -1600,11 +1622,14 @@ button {
 }
 .calculator .main {
   margin-top: 50px;
-  display: block;
 }
 .calculator .main-box {
   display: flex;
   padding-bottom: 100px;
+  transition: all 0.3s ease;
+}
+.calculator .main-box--none {
+  display: none;
 }
 .calculator .main-controls {
   width: 60%;
@@ -1674,7 +1699,7 @@ button {
   justify-content: center;
 }
 .calculator .main--none {
-  display: none;
+  height: 0;
 }
 @media (max-width: 900px) {
   .calculator .main-box {
@@ -1843,6 +1868,9 @@ button {
   background-color: #FF9D00;
 }
 
+.to-do {
+  padding-bottom: 30px;
+}
 .to-do__top {
   display: flex;
   justify-content: space-between;
@@ -1871,10 +1899,15 @@ button {
 }
 .to-do__btn .to-do__arrow {
   transition: transform 0.3s ease;
-  transform: rotate(180deg);
+  transform: rotate(0);
 }
 .to-do__btn--none .to-do__arrow {
-  transform: rotate(0);
+  transform: rotate(180deg);
+}
+.to-do__info {
+  margin-top: 10px;
+  padding-left: 30px;
+  color: #FF9D00;
 }
 .to-do__inner {
   display: block;
